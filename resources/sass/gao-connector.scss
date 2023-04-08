@@ -1,0 +1,155 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Fontawesome
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+body,
+html {
+	height: 100%;
+}
+
+body {
+
+	&.auth {
+		padding: 2rem 0;
+		@extend .bg-primary;
+
+		.card-header {
+			font-weight: bold;
+			background: $terceary-color;	
+
+			.navbar-brand {
+				color: $secondary-color;
+			}		
+		}
+	}
+}
+
+.corporate {
+
+	&,
+	a {
+		color: $terceary-color;
+	}
+}
+
+.header-nav {
+
+	.navbar-brand {
+		color: $terceary-color;
+
+		&:hover {
+			color: $terceary-color !important;
+		}
+	}
+
+	.navbar-light .navbar-nav .nav-link {
+		color: $terceary-color;
+	}
+
+	.dropdown-menu {
+		@extend .bg-primary;
+		border: 0;
+		border-radius: 0;
+
+		.dropdown-item {
+			color: $terceary-color;
+
+			&:hover {
+				color: $secondary-color;
+			}
+		}
+	}
+}
+
+.footer-bottom {
+	margin-top: 4rem;
+	padding: 1rem 0;
+    @extend .bg-primary;
+    color: $terceary-color;
+    font-size: .8rem;
+}
+
+label.error {
+	font-size: .8rem;
+	color: $red;
+}
+
+.wrapper {
+	position: relative;
+	min-height: 95%;
+	padding: 2rem 0;
+
+	.card-header {
+		color: $terceary-color;
+		font-weight: bold;
+	}
+}
+
+.breadcrumb {
+	border: 1px solid #00000012;
+
+	li {
+
+		a {
+			color: $secondary-color;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+    table {
+      border: 0;
+    }
+
+    table thead {
+      display: none;
+    }
+
+    table tr {
+      margin-bottom: 10px;
+      display: block;
+      border-bottom: 2px solid #ddd;
+    }
+
+    table tr:nth-of-type(odd) { 
+      background: #eee; 
+    }
+
+    table td {
+      display: block;
+      text-align: right;
+      font-size: 13px;
+      border-bottom: 1px dotted #ccc;
+    }
+
+    table td:last-child {
+      border-bottom: 0;
+    }
+
+    table td:before {
+      content: attr(data-label);
+      float: left;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .table-bg-white > tbody > tr > td {
+      width: 100%;
+    }
+}
+
+.pagination {
+	@extend .justify-content-center;
+}
+
